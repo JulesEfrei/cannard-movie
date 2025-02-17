@@ -1,0 +1,13 @@
+#!/bin/sh
+COMMIT_MSG=$(cat $1)
+REGEX='^\[[a-zA-Z0-9_-]+\] (feat|fix|chore|docs|style|refactor|perf|test): .+$'
+
+if [[ ! $COMMIT_MSG =~ $REGEX ]]; then
+  echo "ERROR: Invalid commit message format."
+  echo "Please use the following format:"
+  echo "[<scope>] <type>: <message>"
+  echo "e.g., [api] feat: Add new endpoint"
+  echo "e.g., [web] fix: Button styling issue"
+  echo "e.g., [project] chore: Update docker-compose"
+  exit 1
+fi

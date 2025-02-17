@@ -13,8 +13,12 @@
   "scripts": {
     "dev": "pnpm --parallel -r run start:dev",
     "lint": "pnpm --parallel -r run lint",
+    "tsc": "pnpm --parallel -r run tsc",
     "build": "pnpm --parallel -r run build"
   },
   "keywords": [],
-  "packageManager": "pnpm@10.4.1"
+  "packageManager": "pnpm@10.4.1",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
 }

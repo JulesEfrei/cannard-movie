@@ -1,0 +1,4 @@
+#!/bin/sh
+pnpm run lint
+pnpm --filter='apps/api' format
+pnpm run build
